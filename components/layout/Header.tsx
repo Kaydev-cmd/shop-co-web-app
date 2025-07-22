@@ -1,7 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
+import { NAV_LINKS } from "@/constants";
+import Link from "next/link";
+import { CgMenu } from "react-icons/cg";
+import { FaSearch, FaRegUserCircle } from "react-icons/fa";
+import { IoMdSearch } from "react-icons/io";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
-const Header = () => {
-  return <div>Header</div>;
+const Header: React.FC = () => {
+  const [nav, setNav] = useState<boolean>(false);
+
+  const handleNav = () => setNav(!nav);
+
+  return (
+    <header
+      className="flex items-center justify-between"
+      style={{ padding: "24px 12px" }}
+    >
+      <div className="flex items-center gap-4">
+        <CgMenu size={32} onClick={handleNav} />
+        <h1 className="uppercase font-extrabold text-2xl">Shop.co</h1>
+      </div>
+
+      {/* Desktop Links */}
+      <nav className="hidden">
+        {NAV_LINKS.map((link) => (
+          <Link key={link.id} href={link.href}>
+            {link.link}
+          </Link>
+        ))}
+      </nav>
+
+      {/* Mobile Links */}
+      <nav
+        className={`${
+          nav ? "flex" : "hidden"
+        } flex-col items-center justify-center gap-6 absolute top-34 left-0 w-full bg-black text-white transition-all duration-300 ease-in-out h-68`}
+      >
+        {NAV_LINKS.map((link) => (
+          <Link key={link.id} href={link.href} className="text-lg">
+            {link.link}
+          </Link>
+        ))}
+      </nav>
+
+      <div className="flex items-center gap-4">
+        <IoMdSearch size={32} />
+        <MdOutlineShoppingCart size={28} />
+        <FaRegUserCircle size={28} />
+      </div>
+    </header>
+  );
 };
 
 export default Header;

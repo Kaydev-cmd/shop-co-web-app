@@ -1,40 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+🛍️ ShopCo – Dynamic E-Commerce Product Catalog
+ProDev Frontend Project – Real-World Application
 
-## Getting Started
+ShopCo is a dynamic e-commerce product catalog that allows users to seamlessly browse, filter, sort, and interact with a large set of product listings. This project simulates a real-world frontend engineering scenario where usability, performance, and scalability meet modern frontend tooling and best practices.
 
-First, run the development server:
+📌 Project Overview
+This project is part of the ALX ProDev Frontend Program and is designed to demonstrate advanced frontend development skills by building a scalable and responsive e-commerce catalog using a real API.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+By completing this project, you'll gain experience with:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Scalable frontend architecture
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+API integration & dynamic data fetching
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Optimized performance through infinite scroll & pagination
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+State management with Redux
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Type-safe development with TypeScript
 
-## Learn More
+Tailwind CSS for responsive and modern UI
 
-To learn more about Next.js, take a look at the following resources:
+Real-world Git commit workflow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+🎯 Project Goals
+API Integration: Dynamically fetch and render products from a backend API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+User Convenience: Implement advanced filtering and sorting mechanisms
 
-## Deploy on Vercel
+Responsive Design: Build a seamless experience across all screen sizes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Performance Optimization: Use pagination and infinite scroll to handle high-traffic data
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Accessibility: Ensure the product catalog is usable by all users
+
+⚙️ Tech Stack
+Technology	Purpose
+Next.js	UI components and rendering
+Redux	State management
+TypeScript	Type safety and code reliability
+Tailwind CSS	Modern responsive styling
+Axios / Fetch	API communication
+
+🚀 Features
+1. 🔌 API Data Integration
+Fetch product data from a backend API
+
+Display products with loading and error handling states
+
+2. 🔍 Filtering & Sorting
+Category Filter: Select products by category
+
+Price Sort: Sort by price (low-to-high / high-to-low)
+
+Multi-Criteria Filters: Combine filters for precise results
+
+3. 📄 Pagination & Infinite Scrolling
+Choose between page-by-page navigation or auto-loading as you scroll
+
+4. 📱 Responsive Design
+Fully responsive layout for web, tablet, and mobile
+
+Tailwind utility classes to ensure consistent design
+
+🛠️ Implementation Workflow
+
+🔧 Initial Setup
+feat: set up project structure with React and TypeScript
+feat: add API integration for fetching product data
+
+⚙️ Feature Development
+feat: implement product filtering and sorting functionality
+feat: add pagination and infinite scrolling
+
+🎨 UI Enhancements
+style: enhance UI with Tailwind CSS
+
+🐛 Bug Fixes
+fix: resolve bug in filtering logic
+
+📝 Documentation
+docs: update README with project setup and features
+
+🌐 Deployment
+You can deploy ShopCo using any frontend hosting service like:
+
+Vercel
+
+Netlify
+
+Deployment instructions will be added upon project completion.
+
+✅ Evaluation Criteria
+1. Functionality
+Data loads and displays correctly
+
+Filters and sorting behave as expected
+
+Pagination or infinite scroll is smooth
+
+2. Code Quality
+Clean, reusable components
+
+Strong TypeScript usage
+
+Logical Redux state management
+
+3. User Experience
+Mobile-first and responsive design
+
+Seamless UX with fast interactions
+
+Clear navigation and layout
+
+4. Git Workflow
+Frequent, descriptive commits
+
+Well-organized repo structure
+
+Use of feature branches (optional but encouraged)
+
+👨‍💻 Author
+Keamogetswi Malau
+Frontend Developer | ALX ProDev Program Participant
+🇿🇦 South Africa

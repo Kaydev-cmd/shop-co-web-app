@@ -54,32 +54,22 @@ form textarea:focus {
   outline: none;
 }
 
-button,
-.submit-btn {
+button {
   padding: 12px 32px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 100px;
 }
 
-button:hover,
-.submit-btn:hover {
+button:hover {
   opacity: 0.9;
 }
 
-.card,
-.testimonials {
+.card {
   padding: 26px;
 }
 
-.contact {
-  padding: 0 26px;
-}
-
-.pricing {
-  padding: 32px;
-}
 /* Media Queries */
 
 /* 2xl */

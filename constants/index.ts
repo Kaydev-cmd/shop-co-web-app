@@ -59,7 +59,7 @@ export const HERO_STATS = [
   },
 ];
 
-export const PRODUCTS = [
+export const NEW_ARRIVALS = [
   {
     image: "/assets/images/products/black_shirt.png",
     alt: "T-shirt with Tape Details",
@@ -83,5 +83,32 @@ export const PRODUCTS = [
     alt: "Checkered Shirt",
     itemName: "Sleeve Striped T-Shirt",
     price: "$130",
+  },
+];
+
+export const TOP_SELLING = [
+  {
+    image: "/assets/images/products/vertical_stripped.png",
+    alt: "Vertical Stripped Shirt",
+    itemName: "Vertical Stripped Shirt",
+    price: "$212",
+  },
+  {
+    image: "/assets/images/products/courage_graphic.png",
+    alt: "Courage Graphic T-shirt",
+    itemName: "Courage Graphic T-shirt",
+    price: "$145",
+  },
+  {
+    image: "/assets/images/products/loose_fit.png",
+    alt: "Loose Fit Bermuda Short",
+    itemName: "Loose Fit Bermuda Short",
+    price: "$80",
+  },
+  {
+    image: "/assets/images/products/faded_skinny.png",
+    alt: "Faded Skinny Jeans",
+    itemName: "Faded Skinny Jeans",
+    price: "$210",
   },
 ];

@@ -9,16 +9,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price,
 }) => {
   return (
-    <div className="card flex flex-col gap-2">
+    <div className="card flex flex-col gap-3">
       <img src={image} alt={alt} className="rounded-2xl" />
-      <h3 className="font-bold text-xl">{itemName}</h3>
+      <h3 className="font-bold text-2xl">{itemName}</h3>
       <div className="flex items-center gap-2">
         <FaStar color="#FFC633" size={20} />
         <FaStar color="#FFC633" size={20} />
         <FaStar color="#FFC633" size={20} />
         <FaStar color="#FFC633" size={20} />
         <FaStar color="#FFC633" size={20} />
-        <p className="font-bold">
+        <p className="font-bold text-md">
           {" "}
           <span>4.5</span>/5
         </p>

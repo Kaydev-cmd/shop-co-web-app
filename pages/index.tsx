@@ -51,7 +51,7 @@ const Home = () => {
       {/* Reviews */}
       <section id="reviews">
         <div className="container flex flex-col gap-4">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-baseline-last" style={{marginBottom: "16px"}}>
             <h3 className="font-extrabold text-4xl">Our Happy Customers</h3>
             <div className="flex gap-6">
               <FaArrowLeftLong size={20} />

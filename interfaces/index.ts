@@ -13,3 +13,10 @@ export interface HeroStatsProps {
   amountOfUsers: string;
   description: string;
 }
+
+export interface ProductCardProps {
+  image: string;
+  alt: string;
+  itemName: string;
+  price: string;
+}

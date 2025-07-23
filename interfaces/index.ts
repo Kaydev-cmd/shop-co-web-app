@@ -20,3 +20,8 @@ export interface ProductCardProps {
   itemName: string;
   price: string;
 }
+
+export interface ReviewCardProps {
+  nameOfUser: string;
+  review: string;
+}

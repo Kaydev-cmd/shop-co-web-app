@@ -5,6 +5,7 @@ import { NEW_ARRIVALS, REVIEWS, TOP_SELLING } from "@/constants";
 import Button from "@/components/common/Button";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import ReviewCard from "@/components/common/ReviewCard";
+import Subscribe from "@/components/common/Subscribe";
 
 const Home = () => {
   return (
@@ -51,7 +52,10 @@ const Home = () => {
       {/* Reviews */}
       <section id="reviews">
         <div className="container flex flex-col gap-4">
-          <div className="flex justify-between items-baseline-last" style={{marginBottom: "16px"}}>
+          <div
+            className="flex justify-between items-baseline-last"
+            style={{ marginBottom: "16px" }}
+          >
             <h3 className="font-extrabold text-4xl">Our Happy Customers</h3>
             <div className="flex gap-6">
               <FaArrowLeftLong size={20} />
@@ -68,6 +72,11 @@ const Home = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="container">
+        <Subscribe />
       </section>
     </div>
   );

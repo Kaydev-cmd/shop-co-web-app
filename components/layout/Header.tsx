@@ -14,46 +14,48 @@ const Header: React.FC = () => {
   const handleNav = () => setNav(!nav);
 
   return (
-    <header
-      className="flex items-center justify-between"
-      style={{ padding: "24px 12px" }}
-    >
-      <div className="flex items-center gap-4">
-        <CgMenu size={32} onClick={handleNav} />
-        <h1
-          className="uppercase font-extrabold text-2xl"
-          onClick={() => router.push("/")}
+    <header>
+      <div className="container flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <CgMenu size={32} onClick={handleNav} />
+          <h1
+            className="uppercase font-extrabold text-2xl"
+            onClick={() => router.push("/")}
+          >
+            Shop.co
+          </h1>
+        </div>
+
+        {/* Desktop Links */}
+        <nav className="hidden">
+          {NAV_LINKS.map((link) => (
+            <Link key={link.id} href={link.href}>
+              {link.link}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Mobile Links */}
+        <nav
+          className={`${
+            nav ? "flex" : "hidden"
+          } flex-col items-center justify-center gap-6 absolute top-34 left-0 w-full bg-black text-white transition-all duration-300 ease-in-out h-68`}
         >
-          Shop.co
-        </h1>
-      </div>
+          {NAV_LINKS.map((link) => (
+            <Link key={link.id} href={link.href} className="text-lg">
+              {link.link}
+            </Link>
+          ))}
+        </nav>
 
-      {/* Desktop Links */}
-      <nav className="hidden">
-        {NAV_LINKS.map((link) => (
-          <Link key={link.id} href={link.href}>
-            {link.link}
-          </Link>
-        ))}
-      </nav>
-
-      {/* Mobile Links */}
-      <nav
-        className={`${
-          nav ? "flex" : "hidden"
-        } flex-col items-center justify-center gap-6 absolute top-34 left-0 w-full bg-black text-white transition-all duration-300 ease-in-out h-68`}
-      >
-        {NAV_LINKS.map((link) => (
-          <Link key={link.id} href={link.href} className="text-lg">
-            {link.link}
-          </Link>
-        ))}
-      </nav>
-
-      <div className="flex items-center gap-4">
-        <IoMdSearch size={32} />
-        <MdOutlineShoppingCart size={28} onClick={() => router.push("/cart")} />
-        <FaRegUserCircle size={28} onClick={() => router.push("/user")} />
+        <div className="flex items-center gap-4">
+          <IoMdSearch size={32} />
+          <MdOutlineShoppingCart
+            size={28}
+            onClick={() => router.push("/cart")}
+          />
+          <FaRegUserCircle size={28} onClick={() => router.push("/user")} />
+        </div>
       </div>
     </header>
   );

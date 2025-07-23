@@ -58,3 +58,30 @@ export const HERO_STATS = [
     description: "Happy Customers",
   },
 ];
+
+export const PRODUCTS = [
+  {
+    image: "/assets/images/products/black_shirt.png",
+    alt: "T-shirt with Tape Details",
+    itemName: "T-shirt with Tape Details",
+    price: "$120",
+  },
+  {
+    image: "/assets/images/products/jeans.png",
+    alt: "Skinny Fit Jeans",
+    itemName: "Skinny Fit Jeans",
+    price: "$240",
+  },
+  {
+    image: "/assets/images/products/checkered_shirt.png",
+    alt: "Checkered Shirt",
+    itemName: "Checkered Shirt",
+    price: "$180",
+  },
+  {
+    image: "/assets/images/products/sleeve_striped_shirt.png",
+    alt: "Checkered Shirt",
+    itemName: "Sleeve Striped T-Shirt",
+    price: "$130",
+  },
+];

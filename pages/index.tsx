@@ -7,6 +7,16 @@ import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import ReviewCard from "@/components/common/ReviewCard";
 import Subscribe from "@/components/common/Subscribe";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination } from "swiper/modules";
+
 const Home = () => {
   return (
     <div>
@@ -15,35 +25,47 @@ const Home = () => {
       <section id="newArrivals">
         <div className="container flex flex-col gap-4">
           <h3 className="font-extrabold text-4xl text-center">New Arrivals</h3>
-          <div className="grid grid-cols-1">
-            {NEW_ARRIVALS.map((product) => (
-              <ProductCard
-                key={product.itemName}
-                image={product.image}
-                alt={product.alt}
-                itemName={product.itemName}
-                price={product.price}
-              />
-            ))}
+          <div>
+            <Swiper pagination={true} modules={[Pagination]}>
+              {NEW_ARRIVALS.map((product) => (
+                <SwiperSlide>
+                  <ProductCard
+                    key={product.itemName}
+                    image={product.image}
+                    alt={product.alt}
+                    itemName={product.itemName}
+                    price={product.price}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
           <Button title="View All" />
         </div>
       </section>
 
+      <div className="container">
+        <div className="border border-gray-300"></div>
+      </div>
+
       {/* Top Selling */}
       <section id="topSelling">
         <div className="container flex flex-col gap-4">
           <h3 className="font-extrabold text-4xl text-center">Top Selling</h3>
-          <div className="grid grid-cols-1">
-            {TOP_SELLING.map((product) => (
-              <ProductCard
-                key={product.itemName}
-                image={product.image}
-                alt={product.alt}
-                itemName={product.itemName}
-                price={product.price}
-              />
-            ))}
+          <div>
+            <Swiper pagination={true} modules={[Pagination]}>
+              {TOP_SELLING.map((product) => (
+                <SwiperSlide>
+                  <ProductCard
+                    key={product.itemName}
+                    image={product.image}
+                    alt={product.alt}
+                    itemName={product.itemName}
+                    price={product.price}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
           <Button title="View All" />
         </div>
@@ -62,14 +84,18 @@ const Home = () => {
               <FaArrowRightLong size={20} />
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4">
-            {REVIEWS.map((review) => (
-              <ReviewCard
-                key={review.nameOfUser}
-                nameOfUser={review.nameOfUser}
-                review={review.review}
-              />
-            ))}
+          <div>
+            <Swiper>
+              {REVIEWS.map((review) => (
+                <SwiperSlide>
+                  <ReviewCard
+                    key={review.nameOfUser}
+                    nameOfUser={review.nameOfUser}
+                    review={review.review}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>

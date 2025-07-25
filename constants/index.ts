@@ -1,3 +1,6 @@
+import { FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa6";
+
 export const NAV_LINKS = [
   {
     id: 1,
@@ -128,5 +131,109 @@ export const REVIEWS = [
     nameOfUser: "James L.",
     review:
       "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.",
+  },
+];
+
+export const COMPANY_LINKS = [
+  {
+    link: "About",
+    href: "#",
+  },
+  {
+    link: "Features",
+    href: "#",
+  },
+  {
+    link: "Works",
+    href: "#",
+  },
+  {
+    link: "Career",
+    href: "#",
+  },
+];
+
+export const HELP_LINKS = [
+  {
+    link: "Customer Support",
+    href: "#",
+  },
+  {
+    link: "Delivery Details",
+    href: "#",
+  },
+  {
+    link: "Terms & Conditions",
+    href: "#",
+  },
+  {
+    link: "Privacy Policy",
+    href: "#",
+  },
+];
+
+export const FAQ_LINKS = [
+  {
+    link: "Account",
+    href: "#",
+  },
+  {
+    link: "Manage Deliveries",
+    href: "#",
+  },
+  {
+    link: "Orders",
+    href: "#",
+  },
+  {
+    link: "Payment",
+    href: "#",
+  },
+];
+
+export const RESOURCES_LINKS = [
+  {
+    link: "Free eBook",
+    href: "#",
+  },
+  {
+    link: "Development Tutorial",
+    href: "#",
+  },
+  {
+    link: "How to - Blog",
+    href: "#",
+  },
+  {
+    link: "Youtube Playlist",
+    href: "#",
+  },
+];
+
+export const PAYMENT_GATEWAYS = [
+  {
+    name: "Visa",
+    image: "/assets/images/payment_gateways/Visa.png",
+    alt: "Visa",
+  },
+  {
+    name: "Mastercard",
+    image: "/assets/images/payment_gateways/Mastercard.png",
+    alt: "Mastercard",
+  },
+  {
+    name: "PayPal",
+    image: "/assets/images/payment_gateways/PayPal.png",
+    alt: "PayPal",
+  },
+  {
+    name: "Apple Pay",
+    image: "/assets/images/payment_gateways/Apple_Pay.png",
+    alt: "Apple Pay",
+  },
+  {
+    name: "Google Pay",
+    image: "/assets/images/payment_gateways/Google_Pay.png",
+    alt: "Google Pay",
   },
 ];

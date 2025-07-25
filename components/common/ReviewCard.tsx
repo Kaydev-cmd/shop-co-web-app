@@ -17,7 +17,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ nameOfUser, review }) => {
         <h4 className="font-bold text-xl">{nameOfUser}</h4>
         <MdVerifiedUser color="#01AB31" />
       </div>
-      <p>{review}</p>
+      <p className="text-[#666666]">{review}</p>
     </div>
   );
 };

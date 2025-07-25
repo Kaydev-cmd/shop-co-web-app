@@ -49,6 +49,7 @@ const Header: React.FC = () => {
         </nav>
 
         <div className="flex items-center gap-4">
+          {/* Implement Search Bar and Search Functionality */}
           <IoMdSearch size={32} />
           <MdOutlineShoppingCart
             size={28}

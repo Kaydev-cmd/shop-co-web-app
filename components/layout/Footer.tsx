@@ -13,7 +13,7 @@ import {
 const Footer = () => {
   return (
     <footer className="container">
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-3">
           <h1 className="uppercase font-extrabold text-2xl">Shop.Co</h1>
           <p className="text-[#666666] text-lg">
@@ -117,7 +117,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border border-gray-500"></div>
+        <div className="border border-gray-300"></div>
 
         <p className="text-center text-[#666666]">
           Shop.co &copy; 2000-2025. All Rights Reserved

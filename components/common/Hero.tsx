@@ -8,14 +8,14 @@ const Hero = () => {
     <>
       <div className="container">
         <div className="flex flex-col gap-6">
-          <h2 className="font-extrabold text-4xl">
+          <h2 className="font-extrabold text-4xl uppercase">
             Find clothes
             <br />
             that matches
             <br />
             your style
           </h2>
-          <p className="text-lg">
+          <p className="text-lg text-[#666666]">
             Browse through our diverse range of meticulously crafted garments,
             designed
             <br />

@@ -15,13 +15,26 @@ export interface HeroStatsProps {
 }
 
 export interface ProductCardProps {
+  id?: string;
   image: string;
   alt: string;
   itemName: string;
   price: string;
+  description?: string;
 }
 
 export interface ReviewCardProps {
   nameOfUser: string;
   review: string;
+}
+
+export interface PillProps {
+  title: string;
+}
+
+export interface ProductInfoCardProps {
+  productName: string,
+  productRating: number,
+  productPrice: string,
+  productDescription: string,
 }

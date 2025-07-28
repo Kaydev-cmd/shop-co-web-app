@@ -1,6 +1,3 @@
-import { FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa6";
-
 export const NAV_LINKS = [
   {
     id: 1,
@@ -235,5 +232,31 @@ export const PAYMENT_GATEWAYS = [
     name: "Google Pay",
     image: "/assets/images/payment_gateways/Google_Pay.png",
     alt: "Google Pay",
+  },
+];
+
+export const SIZES = [
+  {
+    size: "Small",
+  },
+  {
+    size: "Medium",
+  },
+  {
+    size: "Large",
+  },
+  {
+    size: "X-Large",
+  },
+];
+
+export const PRODUCT_INFO = [
+  {
+    id: "one-life-graphic-tee",
+    productName: "One Life Graphic T-Shirt",
+    productRating: 4.5,
+    productPrice: "$260",
+    productDescription:
+      "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
   },
 ];

@@ -65,24 +65,28 @@ export const NEW_ARRIVALS = [
     alt: "T-shirt with Tape Details",
     itemName: "T-shirt with Tape Details",
     price: "$120",
+    rating: "4.5",
   },
   {
     image: "/assets/images/products/jeans.png",
     alt: "Skinny Fit Jeans",
     itemName: "Skinny Fit Jeans",
     price: "$240",
+    rating: "4.5",
   },
   {
     image: "/assets/images/products/checkered_shirt.png",
     alt: "Checkered Shirt",
     itemName: "Checkered Shirt",
     price: "$180",
+    rating: "4.5",
   },
   {
     image: "/assets/images/products/sleeve_striped_shirt.png",
     alt: "Checkered Shirt",
     itemName: "Sleeve Striped T-Shirt",
     price: "$130",
+    rating: "4.5",
   },
 ];
 
@@ -92,24 +96,42 @@ export const TOP_SELLING = [
     alt: "Vertical Stripped Shirt",
     itemName: "Vertical Stripped Shirt",
     price: "$212",
+    rating: "4.5",
   },
   {
     image: "/assets/images/products/courage_graphic.png",
     alt: "Courage Graphic T-shirt",
     itemName: "Courage Graphic T-shirt",
     price: "$145",
+    rating: "4.5",
   },
   {
     image: "/assets/images/products/loose_fit.png",
     alt: "Loose Fit Bermuda Short",
     itemName: "Loose Fit Bermuda Short",
     price: "$80",
+    rating: "4.5",
   },
   {
     image: "/assets/images/products/faded_skinny.png",
     alt: "Faded Skinny Jeans",
     itemName: "Faded Skinny Jeans",
     price: "$210",
+    rating: "4.5",
+  },
+  {
+    image: "/assets/images/products/vertical_stripped.png",
+    alt: "Vertical Stripped Shirt",
+    itemName: "Vertical Stripped Shirt",
+    price: "$212",
+    rating: "4.5",
+  },
+  {
+    image: "/assets/images/products/courage_graphic.png",
+    alt: "Courage Graphic T-shirt",
+    itemName: "Courage Graphic T-shirt",
+    price: "$145",
+    rating: "4.5",
   },
 ];
 

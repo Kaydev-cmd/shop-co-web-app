@@ -7,6 +7,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   alt,
   itemName,
   price,
+  rating,
 }) => {
   return (
     <div className="card flex flex-col gap-3">
@@ -20,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <FaStar color="#FFC633" size={20} />
         <p className="font-bold text-md">
           {" "}
-          <span>4.5</span>/5
+          <span>{rating}</span>/5
         </p>
       </div>
       <p className="text-2xl font-bold">{price}</p>

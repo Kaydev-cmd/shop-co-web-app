@@ -20,6 +20,7 @@ export interface ProductCardProps {
   alt: string;
   itemName: string;
   price: string;
+  rating: string;
   description?: string;
 }
 
@@ -33,8 +34,12 @@ export interface PillProps {
 }
 
 export interface ProductInfoCardProps {
-  productName: string,
-  productRating: number,
-  productPrice: string,
-  productDescription: string,
+  productName: string;
+  productRating: number;
+  productPrice: string;
+  productDescription: string;
+}
+
+export interface CategoryProps {
+  categoryName: string;
 }

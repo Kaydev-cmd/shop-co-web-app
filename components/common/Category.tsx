@@ -6,7 +6,7 @@ import { CategoryProps } from "@/interfaces";
 
 const Category: React.FC<CategoryProps> = ({ categoryName }) => {
   return (
-    <div>
+    <>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <h1 className="font-bold text-xl">{categoryName}</h1>
@@ -29,7 +29,7 @@ const Category: React.FC<CategoryProps> = ({ categoryName }) => {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

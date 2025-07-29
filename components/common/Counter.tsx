@@ -8,7 +8,7 @@ const Counter = () => {
   return (
     <div
       className="bg-gray-200 rounded-4xl flex items-center gap-4"
-      style={{ padding: "12px 32px" }}
+      style={{ padding: "8px 16px" }}
     >
       <FaMinus onClick={() => setCount(count - 1)} />
       <p>{count}</p>

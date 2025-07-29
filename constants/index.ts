@@ -282,3 +282,30 @@ export const PRODUCT_INFO = [
       "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
   },
 ];
+
+export const CART_ITEMS = [
+  {
+    id: "vertical-stripped",
+    productImage: "/assets/images/products/vertical_stripped.png",
+    productName: "Vertical Stripped",
+    productSize: "Large",
+    productColor: "Green",
+    productPrice: "$212",
+  },
+  {
+    id: "courage-graphic",
+    productImage: "/assets/images/products/courage_graphic.png",
+    productName: "Courage Graphic",
+    productSize: "Medium",
+    productColor: "Orange",
+    productPrice: "$180",
+  },
+  {
+    id: "loose-fit",
+    productImage: "/assets/images/products/loose_fit.png",
+    productName: "Loose Fit",
+    productSize: "Large",
+    productColor: "Blue",
+    productPrice: "$240",
+  },
+];

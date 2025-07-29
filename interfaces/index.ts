@@ -43,3 +43,11 @@ export interface ProductInfoCardProps {
 export interface CategoryProps {
   categoryName: string;
 }
+
+export interface ProductCartCardProps {
+  productImage: string;
+  productName: string;
+  productSize: string;
+  productColor: string;
+  productPrice: string;
+}

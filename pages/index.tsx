@@ -33,6 +33,7 @@ const Home = () => {
                     key={product.itemName}
                     image={product.image}
                     alt={product.alt}
+                    rating={product.rating}
                     itemName={product.itemName}
                     price={product.price}
                   />
@@ -61,6 +62,7 @@ const Home = () => {
                     image={product.image}
                     alt={product.alt}
                     itemName={product.itemName}
+                    rating={product.rating}
                     price={product.price}
                   />
                 </SwiperSlide>

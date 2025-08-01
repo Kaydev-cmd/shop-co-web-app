@@ -35,6 +35,7 @@ const ProductPage = () => {
                     alt={product.alt}
                     itemName={product.itemName}
                     price={product.price}
+                    rating={product.rating}
                   />
                 </SwiperSlide>
               ))}

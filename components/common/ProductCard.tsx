@@ -1,6 +1,7 @@
 import React from "react";
 import { ProductCardProps } from "@/interfaces";
 import { FaStar } from "react-icons/fa";
+import Rating from "./Rating";
 
 const ProductCard: React.FC<ProductCardProps> = ({
   image,
@@ -14,11 +15,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       <img src={image} alt={alt} className="rounded-2xl" />
       <h3 className="font-bold text-2xl">{itemName}</h3>
       <div className="flex items-center gap-2">
-        <FaStar color="#FFC633" size={20} />
-        <FaStar color="#FFC633" size={20} />
-        <FaStar color="#FFC633" size={20} />
-        <FaStar color="#FFC633" size={20} />
-        <FaStar color="#FFC633" size={20} />
+        <Rating />
         <p className="font-bold text-md">
           {" "}
           <span>{rating}</span>/5

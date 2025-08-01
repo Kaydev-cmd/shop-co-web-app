@@ -1,11 +1,11 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
 import { SIZES } from "@/constants";
 import Pill from "./Pill";
 import Counter from "./Counter";
 import Button from "./Button";
 import Reviews from "./Reviews";
 import { ProductInfoCardProps } from "@/interfaces";
+import Rating from "./Rating";
 
 const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
   productName,
@@ -44,13 +44,7 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
       <div className="flex flex-col gap-3">
         <h1 className="font-extrabold text-2xl uppercase">{productName}</h1>
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-2">
-            <FaStar color="#FFC633" size={20} />
-            <FaStar color="#FFC633" size={20} />
-            <FaStar color="#FFC633" size={20} />
-            <FaStar color="#FFC633" size={20} />
-            <FaStar color="#FFC633" size={20} />
-          </div>
+          <Rating />
           <p className="font-bold text-md">
             {" "}
             <span>{productRating}</span>/5

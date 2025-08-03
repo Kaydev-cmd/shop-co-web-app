@@ -34,6 +34,7 @@ export interface PillProps {
 }
 
 export interface ProductInfoCardProps {
+  productImage: string;
   productName: string;
   productRating: number;
   productPrice: string;

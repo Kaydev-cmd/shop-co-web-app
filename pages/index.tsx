@@ -16,6 +16,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -29,14 +30,16 @@ const Home = () => {
             <Swiper pagination={true} modules={[Pagination]}>
               {NEW_ARRIVALS.map((product) => (
                 <SwiperSlide>
-                  <ProductCard
-                    key={product.itemName}
-                    image={product.image}
-                    alt={product.alt}
-                    rating={product.rating}
-                    itemName={product.itemName}
-                    price={product.price}
-                  />
+                  <Link href={`product/${product.id}`} key={product.id}>
+                    <ProductCard
+                      key={product.itemName}
+                      image={product.image}
+                      alt={product.alt}
+                      rating={product.rating}
+                      itemName={product.itemName}
+                      price={product.price}
+                    />
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -57,14 +60,16 @@ const Home = () => {
             <Swiper pagination={true} modules={[Pagination]}>
               {TOP_SELLING.map((product) => (
                 <SwiperSlide>
-                  <ProductCard
-                    key={product.itemName}
-                    image={product.image}
-                    alt={product.alt}
-                    itemName={product.itemName}
-                    rating={product.rating}
-                    price={product.price}
-                  />
+                  <Link href={`/product/${product.id}`} key={product.id}>
+                    <ProductCard
+                      key={product.itemName}
+                      image={product.image}
+                      alt={product.alt}
+                      itemName={product.itemName}
+                      rating={product.rating}
+                      price={product.price}
+                    />
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>

@@ -61,6 +61,7 @@ export const HERO_STATS = [
 
 export const NEW_ARRIVALS = [
   {
+    id: "black-shirt",
     image: "/assets/images/products/black_shirt.png",
     alt: "T-shirt with Tape Details",
     itemName: "T-shirt with Tape Details",
@@ -68,6 +69,7 @@ export const NEW_ARRIVALS = [
     rating: "4.5",
   },
   {
+    id: "jeans",
     image: "/assets/images/products/jeans.png",
     alt: "Skinny Fit Jeans",
     itemName: "Skinny Fit Jeans",
@@ -75,6 +77,7 @@ export const NEW_ARRIVALS = [
     rating: "4.5",
   },
   {
+    id: "checkered-shirt",
     image: "/assets/images/products/checkered_shirt.png",
     alt: "Checkered Shirt",
     itemName: "Checkered Shirt",
@@ -82,8 +85,9 @@ export const NEW_ARRIVALS = [
     rating: "4.5",
   },
   {
+    id: "sleeve-striped-shirt",
     image: "/assets/images/products/sleeve_striped_shirt.png",
-    alt: "Checkered Shirt",
+    alt: "Sleeve Striped T-Shirt",
     itemName: "Sleeve Striped T-Shirt",
     price: "$130",
     rating: "4.5",
@@ -92,6 +96,7 @@ export const NEW_ARRIVALS = [
 
 export const TOP_SELLING = [
   {
+    id: "vertical-stripped",
     image: "/assets/images/products/vertical_stripped.png",
     alt: "Vertical Stripped Shirt",
     itemName: "Vertical Stripped Shirt",
@@ -99,6 +104,7 @@ export const TOP_SELLING = [
     rating: "4.5",
   },
   {
+    id: "courage-graphic",
     image: "/assets/images/products/courage_graphic.png",
     alt: "Courage Graphic T-shirt",
     itemName: "Courage Graphic T-shirt",
@@ -106,6 +112,7 @@ export const TOP_SELLING = [
     rating: "4.5",
   },
   {
+    id: "loose-fit",
     image: "/assets/images/products/loose_fit.png",
     alt: "Loose Fit Bermuda Short",
     itemName: "Loose Fit Bermuda Short",
@@ -113,6 +120,7 @@ export const TOP_SELLING = [
     rating: "4.5",
   },
   {
+    id: "faded-skinny",
     image: "/assets/images/products/faded_skinny.png",
     alt: "Faded Skinny Jeans",
     itemName: "Faded Skinny Jeans",
@@ -120,6 +128,7 @@ export const TOP_SELLING = [
     rating: "4.5",
   },
   {
+    id: "vertical-stripped",
     image: "/assets/images/products/vertical_stripped.png",
     alt: "Vertical Stripped Shirt",
     itemName: "Vertical Stripped Shirt",
@@ -127,6 +136,7 @@ export const TOP_SELLING = [
     rating: "4.5",
   },
   {
+    id: "courage-graphic",
     image: "/assets/images/products/courage_graphic.png",
     alt: "Courage Graphic T-shirt",
     itemName: "Courage Graphic T-shirt",
@@ -275,11 +285,84 @@ export const SIZES = [
 export const PRODUCT_INFO = [
   {
     id: "one-life-graphic-tee",
+    productImage: "/assets/images/product_details/one_life.png",
     productName: "One Life Graphic T-Shirt",
     productRating: 4.5,
     productPrice: "$260",
     productDescription:
       "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+  },
+  {
+    id: "black-shirt",
+    productImage: "/assets/images/products/black_shirt.png",
+    productName: "T-shirt with Tape Details",
+    productRating: "4.5",
+    productPrice: "$120",
+    productDescription:
+      "This t-shirt with tape details is a perfect blend of style and comfort. Made from high-quality fabric, it features a modern design that adds a touch of sophistication to your wardrobe.",
+  },
+  {
+    id: "jeans",
+    productImage: "/assets/images/products/jeans.png",
+    productName: "Skinny Fit Jeans",
+    productRating: "4.5",
+    productPrice: "$240",
+    productDescription:
+      "These skinny fit jeans are a must-have for any fashion-forward individual. Made from durable denim, they offer a sleek and stylish look that pairs well with any outfit.",
+  },
+  {
+    id: "checkered-shirt",
+    productImage: "/assets/images/products/checkered_shirt.png",
+    productName: "Checkered Shirt",
+    productRating: "4.5",
+    productPrice: "$180",
+    productDescription:
+      "This checkered shirt is a timeless classic that never goes out of style. Made from soft cotton fabric, it provides comfort and versatility for any occasion.",
+  },
+  {
+    id: "sleeve-striped-shirt",
+    productImage: "/assets/images/products/sleeve_striped_shirt.png",
+    productName: "Sleeve Striped T-Shirt",
+    productRating: "4.5",
+    productPrice: "$130",
+    productDescription:
+      "This sleeve striped t-shirt is a perfect blend of style and comfort. Made from high-quality fabric, it features a modern design that adds a touch of sophistication to your wardrobe.",
+  },
+  {
+    id: "vertical-stripped",
+    productImage: "/assets/images/products/vertical_stripped.png",
+    productName: "Vertical Stripped Shirt",
+    productRating: "4.5",
+    productPrice: "$212",
+    productDescription:
+      "This vertical stripped shirt is a perfect blend of style and comfort. Made from high-quality fabric, it features a modern design that adds a touch of sophistication to your wardrobe.",
+  },
+  {
+    id: "courage-graphic",
+    productImage: "/assets/images/products/courage_graphic.png",
+    productName: "Courage Graphic T-shirt",
+    productRating: "4.5",
+    productPrice: "$145",
+    productDescription:
+      "This courage graphic t-shirt is a perfect blend of style and comfort. Made from high-quality fabric, it features a modern design that adds a touch of sophistication to your wardrobe.",
+  },
+  {
+    id: "loose-fit",
+    productImage: "/assets/images/products/loose_fit.png",
+    productName: "Loose Fit Bermuda Short",
+    productRating: "4.5",
+    productPrice: "$80",
+    productDescription:
+      "These loose fit bermuda shorts are a perfect blend of style and comfort. Made from high-quality fabric, they feature a modern design that adds a touch of sophistication to your wardrobe.",
+  },
+  {
+    id: "faded-skinny",
+    productImage: "/assets/images/products/faded_skinny.png",
+    productName: "Faded Skinny Jeans",
+    productRating: "4.5",
+    productPrice: "$210",
+    productDescription:
+      "These faded skinny jeans are a must-have for any fashion-forward individual. Made from durable denim, they offer a sleek and stylish look that pairs well with any outfit.",
   },
 ];
 

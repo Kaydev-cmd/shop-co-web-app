@@ -1,47 +1,50 @@
 import React from "react";
+import axios from "axios";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 import ProductDetails from "@/components/products/ProductDetails";
-import { TOP_SELLING } from "@/constants";
-import ProductCard from "@/components/common/ProductCard";
 import Subscribe from "@/components/common/Subscribe";
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-// import required modules
-import { Pagination } from "swiper/modules";
+import YouMightLike from "@/components/common/YouMightLike";
 
 const ProductPage = () => {
+  const router = useRouter();
+  const { id } = router.query;
+
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      if (!id) return;
+      try {
+        const response = await axios.get(`/api/products/${id}`);
+        setProduct(response.data);
+      } catch (err) {
+        console.error("Error fetching product:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProduct();
+  }, [id]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (!product) {
+    return <p>Product not found</p>;
+  }
+
   return (
     <>
-      <ProductDetails />
+      <ProductDetails product={product} />
 
-      {/* You might also like */}
       <section id="alsoLike">
-        <div className="container flex flex-col gap-4">
-          <h3 className="font-extrabold text-4xl text-center uppercase">
-            You Might Also Like
-          </h3>
-          <div>
-            <Swiper pagination={true} modules={[Pagination]}>
-              {TOP_SELLING.map((product) => (
-                <SwiperSlide>
-                  <ProductCard
-                    key={product.itemName}
-                    image={product.image}
-                    alt={product.alt}
-                    itemName={product.itemName}
-                    price={product.price}
-                    rating={product.rating}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        </div>
+        <h3 className="font-extrabold text-4xl text-center uppercase">
+          You Might Also Like
+        </h3>
+        <YouMightLike />
       </section>
 
       <section>

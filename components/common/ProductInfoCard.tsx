@@ -9,6 +9,7 @@ import Rating from "./Rating";
 
 const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
   productName,
+  productImage,
   productRating,
   productPrice,
   productDescription,
@@ -16,29 +17,7 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
   return (
     <>
       {/* Gallery */}
-      <div>
-        <img
-          src="/assets/images/product_details/one_life.png"
-          alt="One Life Graphic Tee"
-        />
-      </div>
-      <div className="flex justify-around rounded-md">
-        <img
-          src="/assets/images/product_details/one_life_rear.png"
-          alt="One Life Graphic Tee"
-          className="w-26 h-26"
-        />
-        <img
-          src="/assets/images/product_details/one_life_rear.png"
-          alt="One Life Graphic Tee Rear"
-          className="w-26 h-26"
-        />
-        <img
-          src="/assets/images/product_details/one_life_2.png"
-          alt="One Life Graphic Tee"
-          className="w-26 h-26"
-        />
-      </div>
+      <img src={productImage} alt={productName} />
 
       {/* ProductInfo */}
       <div className="flex flex-col gap-3">

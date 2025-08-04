@@ -80,7 +80,10 @@ const Home = () => {
               ))}
             </Swiper>
           </div>
-          <Button title="View All" />
+          <Button
+            title="View All"
+            onClick={() => router.push("/top-selling")}
+          />
         </div>
       </section>
 

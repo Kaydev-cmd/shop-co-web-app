@@ -2,8 +2,11 @@ import React from "react";
 import Button from "./Button";
 import { HERO_LOGOS } from "@/constants";
 import HeroStats from "./HeroStats";
+import { useRouter } from "next/router";
 
 const Hero = () => {
+  const router = useRouter();
+
   return (
     <>
       <div className="container">
@@ -21,8 +24,15 @@ const Hero = () => {
             <br />
             to bring out your individuality and cater to your sense of style
           </p>
-          <Button title="Shop Now" />
-          <img src="/assets/images/hero/hero_image.png" className="hidden" />
+          <Button
+            title="Shop Now"
+            onClick={() => router.push("/#newArrivals")}
+          />
+          <img
+            src="/assets/images/hero/hero_image.png"
+            alt="Hero"
+            className="hidden"
+          />
 
           <HeroStats />
         </div>

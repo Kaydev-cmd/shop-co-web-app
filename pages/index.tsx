@@ -6,6 +6,7 @@ import Button from "@/components/common/Button";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import ReviewCard from "@/components/common/ReviewCard";
 import Subscribe from "@/components/common/Subscribe";
+import { useRouter } from "next/router";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,6 +20,8 @@ import { Pagination } from "swiper/modules";
 import Link from "next/link";
 
 const Home = () => {
+  const router = useRouter();
+
   return (
     <div>
       <Hero />
@@ -44,7 +47,10 @@ const Home = () => {
               ))}
             </Swiper>
           </div>
-          <Button title="View All" />
+          <Button
+            title="View All"
+            onClick={() => router.push("/new-arrivals")}
+          />
         </div>
       </section>
 

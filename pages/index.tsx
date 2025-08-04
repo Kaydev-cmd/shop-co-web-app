@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Hero from "@/components/common/Hero";
+import Link from "next/link";
 import ProductCard from "@/components/common/ProductCard";
-import { NEW_ARRIVALS, REVIEWS, TOP_SELLING } from "@/constants";
 import Button from "@/components/common/Button";
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import ReviewCard from "@/components/common/ReviewCard";
 import Subscribe from "@/components/common/Subscribe";
+import { NEW_ARRIVALS, REVIEWS, TOP_SELLING } from "@/constants";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { useRouter } from "next/router";
 
 // Import Swiper React components
@@ -17,10 +18,22 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-import Link from "next/link";
 
 const Home = () => {
   const router = useRouter();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextReview = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % REVIEWS.length);
+  };
+
+  const prevReview = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + REVIEWS.length) % REVIEWS.length
+    );
+  };
+
+  const { nameOfUser } = REVIEWS[currentIndex];
 
   return (
     <div>
@@ -96,22 +109,16 @@ const Home = () => {
           >
             <h3 className="font-extrabold text-4xl">Our Happy Customers</h3>
             <div className="flex gap-6">
-              <FaArrowLeftLong size={20} />
-              <FaArrowRightLong size={20} />
+              <FaArrowLeftLong size={20} onClick={prevReview} />
+              <FaArrowRightLong size={20} onClick={nextReview} />
             </div>
           </div>
-          <div>
-            <Swiper>
-              {REVIEWS.map((review) => (
-                <SwiperSlide>
-                  <ReviewCard
-                    key={review.nameOfUser}
-                    nameOfUser={review.nameOfUser}
-                    review={review.review}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+          <div className="flex flex-col gap-4">
+            <ReviewCard
+              key={nameOfUser}
+              nameOfUser={REVIEWS[currentIndex].nameOfUser}
+              review={REVIEWS[currentIndex].review}
+            />
           </div>
         </div>
       </section>

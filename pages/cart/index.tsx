@@ -29,12 +29,12 @@ const CartPage = () => {
         <div className="flex flex-col card border border-gray-300 gap-3 rounded-xl">
           <h2 className="font-bold text-xl">Order Summary</h2>
           <div className="flex justify-between">
-            <p className="text-[#666666]">Subtotal</p>
-            <p className="font-bold">$565</p>
+            <p className="text-[#666666] md:text-lg">Subtotal</p>
+            <p className="font-bold md:text-lg">$565</p>
           </div>
           <div className="flex justify-between">
-            <p className="text-[#666666]">Delivery Fee</p>
-            <p className="font-bold">$15</p>
+            <p className="text-[#666666] md:text-lg">Delivery Fee</p>
+            <p className="font-bold md:text-lg">$15</p>
           </div>
 
           <div className="container">
@@ -42,8 +42,8 @@ const CartPage = () => {
           </div>
 
           <div className="flex justify-between">
-            <p className="text-[#666666]">Total</p>
-            <p className="font-bold">$467</p>
+            <p className="text-[#666666] md:text-lg">Total</p>
+            <p className="font-bold md:text-lg">$467</p>
           </div>
 
           <div className="flex justify-center">

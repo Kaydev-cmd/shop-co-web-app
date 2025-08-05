@@ -7,6 +7,7 @@ export interface LayoutProps {
 export interface ButtonProps {
   title: string;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
 }
 
 export interface HeroStatsProps {
@@ -31,7 +32,7 @@ export interface ReviewCardProps {
 
 export interface PillProps {
   title: string;
-  selected: boolean
+  selected: boolean;
   onClick: () => void;
 }
 

@@ -65,37 +65,43 @@ const Reviews = () => {
       </div>
 
       {showForm && (
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-4"
-          style={{ marginTop: "24px" }}
-        >
-          <input
-            type="text"
-            placeholder="Enter your name"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            required
-          />
-          <textarea
-            placeholder="Write your review here..."
-            value={formData.review}
-            rows={10}
-            cols={33}
-            onChange={(e) =>
-              setFormData({ ...formData, review: e.target.value })
-            }
-            required
-          />
-          <div className="flex justify-around items-center">
-            <button className="bg-red-600" onClick={() => setShowForm(false)}>
-              Cancel
-            </button>
-            <button className="bg-blue-600" type="submit">
-              Submit Review
-            </button>
-          </div>
-        </form>
+        <div className="fixed inset-0 z-50 bg-white/50 backdrop-blur-sm flex justify-center items-center">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-4"
+            style={{ marginTop: "24px" }}
+          >
+            <input
+              type="text"
+              placeholder="Enter your name"
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
+              required
+              style={{ borderRadius: "16px" }}
+            />
+            <textarea
+              placeholder="Write your review here..."
+              value={formData.review}
+              rows={10}
+              cols={33}
+              onChange={(e) =>
+                setFormData({ ...formData, review: e.target.value })
+              }
+              required
+              style={{ borderRadius: "16px" }}
+            />
+            <div className="flex justify-around items-center">
+              <button className="bg-red-600" onClick={() => setShowForm(false)}>
+                Cancel
+              </button>
+              <button className="bg-blue-600" type="submit">
+                Submit Review
+              </button>
+            </div>
+          </form>
+        </div>
       )}
 
       <div className="flex flex-col gap-6" style={{ marginTop: "24px" }}>

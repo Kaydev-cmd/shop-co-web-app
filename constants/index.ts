@@ -1,21 +1,26 @@
 export const NAV_LINKS = [
   {
     id: 1,
+    link: "Home",
+    href: "/",
+  },
+  {
+    id: 2,
     link: "Shop",
     href: "#",
   },
   {
-    id: 2,
+    id: 3,
     link: "On Sale",
     href: "#",
   },
   {
-    id: 3,
+    id: 4,
     link: "New Arrivals",
     href: "#",
   },
   {
-    id: 4,
+    id: 5,
     link: "Brands",
     href: "#",
   },
@@ -287,7 +292,7 @@ export const PRODUCT_INFO = [
     id: "one-life-graphic-tee",
     productImage: "/assets/images/product_details/one_life.png",
     productName: "One Life Graphic T-Shirt",
-    productRating: 4.5,
+    productRating: "4.5",
     productPrice: "$260",
     productDescription:
       "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",

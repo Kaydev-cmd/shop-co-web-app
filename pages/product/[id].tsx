@@ -40,14 +40,14 @@ const ProductPage = () => {
     <>
       <ProductDetails product={product} />
 
-      <section id="alsoLike">
+      <section id="alsoLike" className="container">
         <h3 className="font-extrabold text-4xl text-center uppercase">
           You Might Also Like
         </h3>
         <YouMightLike />
       </section>
 
-      <section>
+      <section className="container">
         <Subscribe />
       </section>
     </>

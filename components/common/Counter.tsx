@@ -10,9 +10,9 @@ const Counter = () => {
       className="bg-gray-200 rounded-4xl flex items-center gap-4"
       style={{ padding: "8px 16px" }}
     >
-      <FaMinus onClick={() => setCount(count - 1)} />
+      <FaMinus onClick={() => setCount((prev) => (prev > 0 ? prev - 1 : 0))} />
       <p>{count}</p>
-      <FaPlus onClick={() => setCount(count + 1)} />
+      <FaPlus onClick={() => setCount((prev) => prev + 1)} />
     </div>
   );
 };

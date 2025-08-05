@@ -6,10 +6,12 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useRouter } from "next/router";
+import SearchBar from "../common/SearchBar";
 
 const Header: React.FC = () => {
   const router = useRouter();
   const [nav, setNav] = useState<boolean>(false);
+  const [searchOpen, setSearchOpen] = useState<boolean>(false);
 
   const handleNav = () => setNav(!nav);
 
@@ -18,14 +20,16 @@ const Header: React.FC = () => {
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-4">
           <CgMenu size={32} onClick={handleNav} />
-          <h1
-            className="uppercase font-extrabold text-2xl"
-            onClick={() => router.push("/")}
-          >
-            Shop.co
-          </h1>
+          {!searchOpen && (
+            <h1
+              className="uppercase font-extrabold text-2xl"
+              onClick={() => router.push("/")}
+            >
+              Shop.co
+            </h1>
+          )}
         </div>
-
+        {searchOpen && <SearchBar />}
         {/* Desktop Links */}
         <nav className="hidden">
           {NAV_LINKS.map((link) => (
@@ -39,7 +43,7 @@ const Header: React.FC = () => {
         <nav
           className={`${
             nav ? "flex" : "hidden"
-          } flex-col items-center justify-center gap-6 absolute top-34 left-0 w-full bg-black text-white transition-all duration-300 ease-in-out h-68`}
+          } flex-col items-center justify-center gap-6 absolute top-34 left-0 w-full bg-black text-white transition-all duration-300 ease-in-out h-72`}
         >
           {NAV_LINKS.map((link) => (
             <Link key={link.id} href={link.href} className="text-lg">
@@ -49,8 +53,10 @@ const Header: React.FC = () => {
         </nav>
 
         <div className="flex items-center gap-4">
-          {/* Implement Search Bar and Search Functionality */}
-          <IoMdSearch size={32} />
+          <IoMdSearch
+            size={32}
+            onClick={() => setSearchOpen((prev) => !prev)}
+          />
           <MdOutlineShoppingCart
             size={28}
             onClick={() => router.push("/cart")}

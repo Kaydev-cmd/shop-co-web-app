@@ -19,7 +19,7 @@ const Header: React.FC = () => {
     <header>
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <CgMenu size={32} onClick={handleNav} />
+          <CgMenu size={32} onClick={handleNav} className="md:hidden"/>
           {!searchOpen && (
             <h1
               className="uppercase font-extrabold text-2xl"
@@ -30,8 +30,9 @@ const Header: React.FC = () => {
           )}
         </div>
         {searchOpen && <SearchBar />}
+        
         {/* Desktop Links */}
-        <nav className="hidden">
+        <nav className="hidden md:flex items-center gap-6">
           {NAV_LINKS.map((link) => (
             <Link key={link.id} href={link.href}>
               {link.link}

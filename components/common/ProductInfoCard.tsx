@@ -1,11 +1,10 @@
 import React from "react";
-import { SIZES } from "@/constants";
-import Pill from "./Pill";
 import Counter from "./Counter";
 import Button from "./Button";
 import Reviews from "./Reviews";
 import { ProductInfoCardProps } from "@/interfaces";
 import Rating from "./Rating";
+import PillGroup from "./PillGroup";
 
 const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
   productName,
@@ -74,11 +73,7 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
           >
             Select Size
           </h2>
-          <div className="flex justify-around">
-            {SIZES.map((size) => (
-              <Pill key={size.size} title={size.size} />
-            ))}
-          </div>
+          <PillGroup />
         </div>
 
         {/* Count and Add To Cart */}

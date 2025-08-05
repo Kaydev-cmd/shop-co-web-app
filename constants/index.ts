@@ -97,6 +97,22 @@ export const NEW_ARRIVALS = [
     price: "$130",
     rating: "4.5",
   },
+  {
+    id: "black-shirt",
+    image: "/assets/images/products/black_shirt.png",
+    alt: "T-shirt with Tape Details",
+    itemName: "T-shirt with Tape Details",
+    price: "$120",
+    rating: "4.5",
+  },
+  {
+    id: "jeans",
+    image: "/assets/images/products/jeans.png",
+    alt: "Skinny Fit Jeans",
+    itemName: "Skinny Fit Jeans",
+    price: "$240",
+    rating: "4.5",
+  },
 ];
 
 export const TOP_SELLING = [

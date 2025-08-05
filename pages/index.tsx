@@ -43,7 +43,24 @@ const Home = () => {
         <div className="container flex flex-col gap-4">
           <h3 className="font-extrabold text-4xl text-center">New Arrivals</h3>
           <div>
-            <Swiper pagination={true} modules={[Pagination]}>
+            <Swiper
+              pagination={true}
+              modules={[Pagination]}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+              }}
+            >
               {NEW_ARRIVALS.map((product) => (
                 <SwiperSlide>
                   <Link href={`product/${product.id}`} key={product.id}>
@@ -76,7 +93,24 @@ const Home = () => {
         <div className="container flex flex-col gap-4">
           <h3 className="font-extrabold text-4xl text-center">Top Selling</h3>
           <div>
-            <Swiper pagination={true} modules={[Pagination]}>
+            <Swiper
+              pagination={true}
+              modules={[Pagination]}
+              breakpoints={{
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                },
+              }}
+            >
               {TOP_SELLING.map((product) => (
                 <SwiperSlide>
                   <Link href={`/product/${product.id}`} key={product.id}>

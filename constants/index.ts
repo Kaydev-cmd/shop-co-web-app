@@ -288,21 +288,6 @@ export const PAYMENT_GATEWAYS = [
   },
 ];
 
-export const SIZES = [
-  {
-    size: "Small",
-  },
-  {
-    size: "Medium",
-  },
-  {
-    size: "Large",
-  },
-  {
-    size: "X-Large",
-  },
-];
-
 export const PRODUCT_INFO = [
   {
     id: "one-life-graphic-tee",

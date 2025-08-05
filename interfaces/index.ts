@@ -31,6 +31,8 @@ export interface ReviewCardProps {
 
 export interface PillProps {
   title: string;
+  selected: boolean
+  onClick: () => void;
 }
 
 export interface ProductInfoCardProps {

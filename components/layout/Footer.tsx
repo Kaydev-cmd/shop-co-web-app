@@ -55,7 +55,7 @@ const Footer = () => {
         </div>
 
         {/* Links */}
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="flex flex-col gap-4">
             <h3 className="font-bold text-xl uppercase">Company</h3>
             <ul className="flex flex-col gap-3">

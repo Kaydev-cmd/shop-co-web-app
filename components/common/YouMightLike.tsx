@@ -17,7 +17,24 @@ const YouMightLike = () => {
   return (
     <div className="flex flex-col gap-4">
       <div>
-        <Swiper pagination={true} modules={[Pagination]}>
+        <Swiper
+          pagination={true}
+          modules={[Pagination]}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+        >
           {TOP_SELLING.map((product) => (
             <SwiperSlide>
               <Link href={`/product/${product.id}`} key={product.id}>

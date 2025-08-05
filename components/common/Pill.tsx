@@ -3,7 +3,7 @@ import { PillProps } from "@/interfaces";
 
 const Pill: React.FC<PillProps> = ({ title }) => {
   return (
-    <div className="bg-gray-200 rounded-4xl" style={{ padding: "12px" }}>
+    <div className="bg-gray-200 rounded-4xl hover:bg-black hover:text-white" style={{ padding: "12px" }}>
       <p>{title}</p>
     </div>
   );

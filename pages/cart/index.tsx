@@ -8,8 +8,6 @@ import { motion } from "framer-motion";
 const CartPage = () => {
   const { cartItems, removeFromCart, totalPrice } = useCart();
 
-  console.log(cartItems);
-
   const subtotal = cartItems.reduce((acc, cartItem) => {
     return acc + Number(cartItem.productPrice) * Number(cartItem.quantity);
   }, 0);
@@ -38,7 +36,7 @@ const CartPage = () => {
         ) : (
           <div className="flex flex-col gap-6">
             {/* Cart Items */}
-            <div className="card border border-gray-300 flex flex-col gap-4 rounded-xl">
+            <div className="card border border-gray-300 grid grid-cols-1 lg:grid-cols-2 gap-4 rounded-xl">
               {cartItems.map((cartItem) => (
                 <div
                   key={`${cartItem.id}-${cartItem.productSize}-${cartItem.productColor}`}
@@ -81,7 +79,7 @@ const CartPage = () => {
                 </div>
 
                 <div className="flex justify-center">
-                  <button className="bg-black text-white px-6 py-2 rounded-md flex items-center gap-4 hover:bg-gray-900 transition-all">
+                  <button className="bg-black text-white rounded-md flex items-center gap-4 hover:bg-gray-900 transition-all">
                     Go to Checkout <FaArrowRight size={20} />
                   </button>
                 </div>

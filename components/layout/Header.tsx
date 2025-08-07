@@ -46,7 +46,7 @@ const Header: React.FC = () => {
             </div>
             {!searchOpen && (
               <h1
-                className="uppercase font-extrabold text-2xl"
+                className="uppercase font-extrabold text-2xl cursor-pointer hover:text-blue-600 transition-all duration-300"
                 onClick={() => router.push("/")}
               >
                 Shop.co
@@ -56,9 +56,13 @@ const Header: React.FC = () => {
           {searchOpen && <SearchBar />}
 
           {/* Desktop Links */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6 font-semibold">
             {NAV_LINKS.map((link) => (
-              <Link key={link.id} href={link.href}>
+              <Link
+                key={link.id}
+                href={link.href}
+                className="hover:text-blue-600 transition-all duration-300"
+              >
                 {link.link}
               </Link>
             ))}
@@ -73,7 +77,7 @@ const Header: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="flex flex-col items-center justify-center gap-6 absolute top-32 left-0 w-full bg-black text-white h-72 z-50"
+                className="flex flex-col items-center justify-center gap-6 absolute top-32 left-0 w-full bg-black text-white h-68 z-5"
               >
                 {NAV_LINKS.map((link) => (
                   <Link
@@ -93,9 +97,14 @@ const Header: React.FC = () => {
             <IoMdSearch
               size={32}
               onClick={() => setSearchOpen((prev) => !prev)}
+              className="hover:text-blue-600 transition-all duration-300 cursor-pointer"
             />
             <CartIcon />
-            <FaRegUserCircle size={28} onClick={() => router.push("/user")} />
+            {/* <FaRegUserCircle
+              size={28}
+              onClick={() => router.push("/user")}
+              className="hover:text-blue-600 transition-all duration-300 cursor-pointer"
+            /> */}
           </div>
         </div>
       </header>

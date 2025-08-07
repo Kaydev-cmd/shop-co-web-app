@@ -7,22 +7,22 @@ export const NAV_LINKS = [
   {
     id: 2,
     link: "Shop",
-    href: "#",
+    href: "/#newArrivals",
   },
   {
     id: 3,
-    link: "On Sale",
-    href: "#",
+    link: "Top Selling",
+    href: "/top-selling",
   },
   {
     id: 4,
     link: "New Arrivals",
-    href: "#",
+    href: "/new-arrivals",
   },
   {
     id: 5,
-    link: "Brands",
-    href: "#",
+    link: "Cart",
+    href: "/cart",
   },
 ];
 
@@ -113,6 +113,22 @@ export const NEW_ARRIVALS = [
     price: 240,
     rating: "4.5",
   },
+  {
+    id: "sleeve-striped-shirt",
+    image: "/assets/images/products/sleeve_striped_shirt.png",
+    alt: "Sleeve Striped T-Shirt",
+    itemName: "Sleeve Striped T-Shirt",
+    price: 130,
+    rating: "4.5",
+  },
+  {
+    id: "black-shirt",
+    image: "/assets/images/products/black_shirt.png",
+    alt: "T-shirt with Tape Details",
+    itemName: "T-shirt with Tape Details",
+    price: 120,
+    rating: "4.5",
+  },
 ];
 
 export const TOP_SELLING = [
@@ -162,6 +178,22 @@ export const TOP_SELLING = [
     alt: "Courage Graphic T-shirt",
     itemName: "Courage Graphic T-shirt",
     price: 145,
+    rating: "4.5",
+  },
+  {
+    id: "loose-fit",
+    image: "/assets/images/products/loose_fit.png",
+    alt: "Loose Fit Bermuda Short",
+    itemName: "Loose Fit Bermuda Short",
+    price: 80,
+    rating: "4.5",
+  },
+  {
+    id: "faded-skinny",
+    image: "/assets/images/products/faded_skinny.png",
+    alt: "Faded Skinny Jeans",
+    itemName: "Faded Skinny Jeans",
+    price: 210,
     rating: "4.5",
   },
 ];
@@ -369,33 +401,6 @@ export const PRODUCT_INFO = [
     productPrice: 210,
     productDescription:
       "These faded skinny jeans are a must-have for any fashion-forward individual. Made from durable denim, they offer a sleek and stylish look that pairs well with any outfit.",
-  },
-];
-
-export const CART_ITEMS = [
-  {
-    id: "vertical-stripped",
-    productImage: "/assets/images/products/vertical_stripped.png",
-    productName: "Vertical Stripped",
-    productSize: "Large",
-    productColor: "Green",
-    productPrice: 212,
-  },
-  {
-    id: "courage-graphic",
-    productImage: "/assets/images/products/courage_graphic.png",
-    productName: "Courage Graphic",
-    productSize: "Medium",
-    productColor: "Orange",
-    productPrice: 180,
-  },
-  {
-    id: "loose-fit",
-    productImage: "/assets/images/products/loose_fit.png",
-    productName: "Loose Fit",
-    productSize: "Large",
-    productColor: "Blue",
-    productPrice: 240,
   },
 ];
 

@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Pill from "./Pill";
+import { PillGroupProps } from "@/interfaces";
 
-const PillGroup = () => {
-  const [selectedPill, setSelectedPill] = useState("");
-
+const PillGroup: React.FC<PillGroupProps> = ({ selectedPill, onSelect }) => {
   const sizes = ["Small", "Medium", "Large", "X-Large"];
 
   return (
@@ -13,7 +12,7 @@ const PillGroup = () => {
           key={size}
           title={size}
           selected={selectedPill === size}
-          onClick={() => setSelectedPill(size)}
+          onClick={() => onSelect(size)}
         />
       ))}
     </div>

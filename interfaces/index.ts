@@ -20,7 +20,7 @@ export interface ProductCardProps {
   image: string;
   alt: string;
   itemName: string;
-  price: string;
+  price: number;
   rating: string;
   description?: string;
 }
@@ -36,11 +36,16 @@ export interface PillProps {
   onClick: () => void;
 }
 
+export interface PillGroupProps {
+  selectedPill: string;
+  onSelect: (size: string) => void;
+}
+
 export interface ProductInfoCardProps {
   productImage: string;
   productName: string;
   productRating: number;
-  productPrice: string;
+  productPrice: number;
   productDescription: string;
 }
 
@@ -53,5 +58,31 @@ export interface ProductCartCardProps {
   productName: string;
   productSize: string;
   productColor: string;
-  productPrice: string;
+  productPrice: number;
+  quantity?: number;
+  onRemove?: () => void;
+}
+
+export interface CartItem {
+  id: string;
+  productName: string;
+  productImage: string;
+  productSize: string;
+  productColor: string;
+  productPrice: number;
+  quantity: number;
+}
+
+export interface CartContextType {
+  cartItems: CartItem[];
+  addToCart: (item: CartItem) => void;
+  removeFromCart: (item: CartItem) => void;
+  clearCart: () => void;
+  totalPrice: number;
+  setCartItems: React.Dispatch<React.SetStateAction<CartItem[]>>;
+}
+
+export interface CounterProps {
+  value: number;
+  onChange: (newValue: number) => void;
 }

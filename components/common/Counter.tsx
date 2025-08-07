@@ -13,9 +13,9 @@ const Counter: React.FC<CounterProps> = ({ value, onChange }) => {
       className="bg-gray-200 rounded-4xl flex items-center justify-center gap-6 md:w-[160px] md:text-md"
       style={{ padding: "12px 16px" }}
     >
-      <FaMinus onClick={decrement} />
+      <FaMinus onClick={decrement} className="cursor-pointer" />
       <p>{value}</p>
-      <FaPlus onClick={increment} />
+      <FaPlus onClick={increment} className="cursor-pointer" />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import ProductDetails from "@/components/products/ProductDetails";
 import Subscribe from "@/components/common/Subscribe";
 import YouMightLike from "@/components/common/YouMightLike";
+import { motion } from "framer-motion";
 
 const ProductPage = () => {
   const router = useRouter();
@@ -40,16 +41,30 @@ const ProductPage = () => {
     <>
       <ProductDetails product={product} />
 
-      <section id="alsoLike" className="container">
-        <h3 className="font-extrabold text-4xl text-center uppercase">
-          You Might Also Like
-        </h3>
-        <YouMightLike />
-      </section>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <section id="alsoLike" className="container">
+          <h3 className="font-extrabold text-4xl text-center uppercase">
+            You Might Also Like
+          </h3>
+          <YouMightLike />
+        </section>
+      </motion.div>
 
-      <section className="container">
-        <Subscribe />
-      </section>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <section className="container">
+          <Subscribe />
+        </section>
+      </motion.div>
     </>
   );
 };

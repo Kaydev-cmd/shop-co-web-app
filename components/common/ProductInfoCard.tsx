@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Counter from "./Counter";
 import Button from "./Button";
 import Reviews from "./Reviews";
 import { ProductInfoCardProps } from "@/interfaces";
 import Rating from "./Rating";
 import PillGroup from "./PillGroup";
+import { useCart } from "@/context/CartContext";
+import { COLORS } from "@/constants";
 
 const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
   productName,
@@ -13,6 +15,36 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
   productPrice,
   productDescription,
 }) => {
+  const { addToCart } = useCart();
+
+  const [selectedSize, setSelectedSize] = useState("");
+  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedQuantity, setSelectedQuantity] = useState(1);
+  const [message, setMessage] = useState("");
+  const selectedPrice = productPrice;
+
+  const handleAddToCart = () => {
+    if (!selectedSize || !selectedColor) {
+      setMessage("Please select size and color before adding to cart.");
+      return;
+    }
+
+    addToCart({
+      id: productName,
+      productName,
+      productImage,
+      productSize: selectedSize,
+      productColor: selectedColor,
+      productPrice: selectedPrice,
+      quantity: selectedQuantity,
+    });
+    setMessage("Item added to cart successfully!");
+  };
+
+  useEffect(() => {
+    setMessage("");
+  }, [selectedSize, selectedColor]);
+
   return (
     <>
       {/* Gallery */}
@@ -28,7 +60,7 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
             <span>{productRating}</span>/5
           </p>
         </div>
-        <p className="text-2xl font-bold">{productPrice}</p>
+        <p className="text-2xl font-bold">${productPrice}</p>
         <p className="text-[#666666] text-lg" style={{ marginBottom: "12px" }}>
           {productDescription}
         </p>
@@ -46,18 +78,20 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
             Select Colors
           </h2>
           <div className="flex gap-3">
-            <div
-              className="rounded-full bg-[#4F4631]"
-              style={{ padding: "16px" }}
-            ></div>
-            <div
-              className="rounded-full bg-[#314F4A]"
-              style={{ padding: "16px" }}
-            ></div>
-            <div
-              className="rounded-full bg-[#31344F]"
-              style={{ padding: "16px" }}
-            ></div>
+            {COLORS.map((color) => (
+              <div
+                key={color.hex}
+                className={`rounded-full cursor-pointer ${
+                  selectedColor === color.name ? "ring-2 ring-black" : ""
+                }`}
+                onClick={() => setSelectedColor(color.name)}
+                style={{
+                  backgroundColor: color.hex,
+                  padding: "16px",
+                }}
+                title={color.name}
+              ></div>
+            ))}
           </div>
         </div>
 
@@ -73,7 +107,7 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
           >
             Select Size
           </h2>
-          <PillGroup />
+          <PillGroup selectedPill={selectedSize} onSelect={setSelectedSize} />
         </div>
 
         {/* Count and Add To Cart */}
@@ -81,9 +115,22 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
           className="flex items-center justify-around"
           style={{ marginTop: "12px" }}
         >
-          <Counter />
-          <Button title="Add to Cart" />
+          <Counter value={selectedQuantity} onChange={setSelectedQuantity} />
+          <Button title="Add to Cart" onClick={handleAddToCart} />
         </div>
+
+        {message && (
+          <p
+            className={`text-sm text-center ${
+              message.includes("successfully")
+                ? "text-green-500"
+                : "text-red-500"
+            }`}
+            style={{ marginTop: "20px" }}
+          >
+            {message}
+          </p>
+        )}
 
         {/* Add Reviews */}
         <section>

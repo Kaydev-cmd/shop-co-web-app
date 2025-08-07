@@ -11,7 +11,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <div className="card flex flex-col gap-3">
-      <img src={image} alt={alt} className="rounded-2xl" />
+      <img src={image} alt={alt} className="rounded-2xl w-full" />
       <h3 className="font-bold text-2xl">{itemName}</h3>
       <div className="flex items-center gap-2">
         <Rating />

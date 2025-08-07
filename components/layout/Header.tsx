@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { NAV_LINKS } from "@/constants";
 import Link from "next/link";
 import { CgMenu } from "react-icons/cg";
@@ -12,6 +12,21 @@ const Header: React.FC = () => {
   const router = useRouter();
   const [nav, setNav] = useState<boolean>(false);
   const [searchOpen, setSearchOpen] = useState<boolean>(false);
+
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (nav && navRef.current && !navRef.current.contains(e.target as Node)) {
+        setNav(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [nav]);
 
   const handleNav = () => setNav(!nav);
 
@@ -42,12 +57,18 @@ const Header: React.FC = () => {
 
         {/* Mobile Links */}
         <nav
+          ref={navRef}
           className={`${
             nav ? "flex" : "hidden"
           } flex-col items-center justify-center gap-6 absolute top-34 left-0 w-full bg-black text-white transition-all duration-300 ease-in-out h-72`}
         >
           {NAV_LINKS.map((link) => (
-            <Link key={link.id} href={link.href} className="text-lg">
+            <Link
+              key={link.id}
+              href={link.href}
+              className="text-lg"
+              onClick={() => setNav(false)}
+            >
               {link.link}
             </Link>
           ))}

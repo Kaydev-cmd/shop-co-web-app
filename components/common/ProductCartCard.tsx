@@ -13,10 +13,7 @@ const ProductCartCard: React.FC<ProductCartCardProps> = ({
   const { removeFromCart } = useCart();
 
   return (
-    <div
-      className="flex justify-around items-center"
-      style={{ padding: "4px 0" }}
-    >
+    <div className="flex items-center" style={{ padding: "4px 0" }}>
       <div>
         <img
           src={productImage}

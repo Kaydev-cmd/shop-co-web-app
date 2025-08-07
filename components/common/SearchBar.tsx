@@ -12,7 +12,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="" style={{ width: "50%" }}>
+    <div className="searchBar">
       <input
         type="text"
         placeholder="Search for products here..."

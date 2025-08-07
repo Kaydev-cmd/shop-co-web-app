@@ -6,7 +6,7 @@ const Pill: React.FC<PillProps> = ({ title, selected, onClick }) => {
     <div
       className={`rounded-4xl ${
         selected ? "bg-black text-white" : "bg-gray-200 text-black"
-      } transition duration-200 md:w-[140px]`}
+      } transition duration-200 md:w-[140px] cursor-pointer`}
       style={{ padding: "12px" }}
       onClick={onClick}
     >

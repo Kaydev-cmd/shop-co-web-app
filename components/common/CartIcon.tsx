@@ -14,7 +14,11 @@ const CartIcon = () => {
 
   return (
     <div className="relative">
-      <MdOutlineShoppingCart size={28} onClick={() => router.push("/cart")} />
+      <MdOutlineShoppingCart
+        size={28}
+        onClick={() => router.push("/cart")}
+        className="hover:text-blue-600 transition-all duration-300 cursor-pointer"
+      />
       {totalItems > 0 && (
         <span
           className="absolute bottom-4 left-4 bg-red-500 text-white text-xs rounded-full"

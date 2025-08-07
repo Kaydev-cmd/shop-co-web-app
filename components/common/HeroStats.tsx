@@ -3,7 +3,7 @@ import { HERO_STATS } from "@/constants";
 
 const HeroStats = () => {
   return (
-    <div className="flex gap-2 md:hidden">
+    <div className="flex gap-2 sm:hidden" style={{marginTop: "6px"}}>
       {HERO_STATS.map((stat) => (
         <div
           className="border-r-2 last:border-r-0"

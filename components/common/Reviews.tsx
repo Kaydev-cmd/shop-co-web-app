@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 import { ImEqualizer2 } from "react-icons/im";
 import ReviewCard from "./ReviewCard";
+import { motion } from "framer-motion";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([
@@ -47,71 +48,81 @@ const Reviews = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center">
-        <h3>
-          <span className="font-bold text-xl">All Reviews</span> (
-          {reviews.length})
-        </h3>
-        <div className="flex items-center ">
-          <div
-            className="bg-gray-200 rounded-full"
-            style={{ padding: "12px", marginRight: "8px" }}
-          >
-            <ImEqualizer2 />
-          </div>
-          <Button title="Write a Review" onClick={() => setShowForm(true)} />
-        </div>
-      </div>
-
-      {showForm && (
-        <div className="fixed inset-0 z-50 bg-white/50 backdrop-blur-sm flex justify-center items-center">
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-4"
-            style={{ marginTop: "24px" }}
-          >
-            <input
-              type="text"
-              placeholder="Enter your name"
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
-              required
-              style={{ borderRadius: "16px" }}
-            />
-            <textarea
-              placeholder="Write your review here..."
-              value={formData.review}
-              rows={10}
-              cols={33}
-              onChange={(e) =>
-                setFormData({ ...formData, review: e.target.value })
-              }
-              required
-              style={{ borderRadius: "16px" }}
-            />
-            <div className="flex justify-around items-center">
-              <button className="bg-red-600" onClick={() => setShowForm(false)}>
-                Cancel
-              </button>
-              <button className="bg-blue-600" type="submit">
-                Submit Review
-              </button>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <div className="flex justify-between items-center">
+          <h3>
+            <span className="font-bold text-xl">All Reviews</span> (
+            {reviews.length})
+          </h3>
+          <div className="flex items-center ">
+            <div
+              className="bg-gray-200 rounded-full"
+              style={{ padding: "12px", marginRight: "8px" }}
+            >
+              <ImEqualizer2 />
             </div>
-          </form>
+            <Button title="Write a Review" onClick={() => setShowForm(true)} />
+          </div>
         </div>
-      )}
 
-      <div className="flex flex-col gap-6" style={{ marginTop: "24px" }}>
-        {reviews.map((review) => (
-          <ReviewCard
-            key={review.nameOfUser}
-            nameOfUser={review.nameOfUser}
-            review={review.review}
-          />
-        ))}
-      </div>
+        {showForm && (
+          <div className="fixed inset-0 z-50 bg-white/50 backdrop-blur-sm flex justify-center items-center">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-4"
+              style={{ marginTop: "24px" }}
+            >
+              <input
+                type="text"
+                placeholder="Enter your name"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                required
+                style={{ borderRadius: "16px" }}
+              />
+              <textarea
+                placeholder="Write your review here..."
+                value={formData.review}
+                rows={10}
+                cols={33}
+                onChange={(e) =>
+                  setFormData({ ...formData, review: e.target.value })
+                }
+                required
+                style={{ borderRadius: "16px" }}
+              />
+              <div className="flex justify-around items-center">
+                <button
+                  className="bg-red-600"
+                  onClick={() => setShowForm(false)}
+                >
+                  Cancel
+                </button>
+                <button className="bg-blue-600" type="submit">
+                  Submit Review
+                </button>
+              </div>
+            </form>
+          </div>
+        )}
+
+        <div className="flex flex-col gap-6" style={{ marginTop: "24px" }}>
+          {reviews.map((review) => (
+            <ReviewCard
+              key={review.nameOfUser}
+              nameOfUser={review.nameOfUser}
+              review={review.review}
+            />
+          ))}
+        </div>
+      </motion.div>
     </>
   );
 };

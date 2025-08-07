@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { PRODUCT_INFO } from "@/constants";
 import ProductCard from "@/components/common/ProductCard";
 import Subscribe from "@/components/common/Subscribe";
+import { motion } from "framer-motion";
 
 const SearchPage = () => {
   const searchParams = useSearchParams();
@@ -18,34 +19,48 @@ const SearchPage = () => {
 
   return (
     <>
-      <section className="container">
-        <h1> Search Results for "{query}"</h1>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <section className="container">
+          <h1> Search Results for "{query}"</h1>
 
-        {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1">
-            {filteredProducts.map((product) => (
-              <Link href={`/product/${product.id}`} key={product.id}>
-                <ProductCard
-                  key={product.id}
-                  id={product.id}
-                  image={product.productImage}
-                  alt={product.productName}
-                  itemName={product.productName}
-                  price={product.productPrice}
-                  rating={product.productRating}
-                  description={product.productDescription}
-                />
-              </Link>
-            ))}
-          </div>
-        ) : (
-          <p>No products found matching your search.</p>
-        )}
-      </section>
+          {filteredProducts.length > 0 ? (
+            <div className="grid grid-cols-1">
+              {filteredProducts.map((product) => (
+                <Link href={`/product/${product.id}`} key={product.id}>
+                  <ProductCard
+                    key={product.id}
+                    id={product.id}
+                    image={product.productImage}
+                    alt={product.productName}
+                    itemName={product.productName}
+                    price={product.productPrice}
+                    rating={product.productRating}
+                    description={product.productDescription}
+                  />
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <p>No products found matching your search.</p>
+          )}
+        </section>
+      </motion.div>
 
-      <section className="container">
-        <Subscribe />
-      </section>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <section className="container">
+          <Subscribe />
+        </section>
+      </motion.div>
     </>
   );
 };

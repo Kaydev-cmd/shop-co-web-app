@@ -4,9 +4,9 @@ import Link from "next/link";
 import { CgMenu } from "react-icons/cg";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
-import { MdOutlineShoppingCart } from "react-icons/md";
 import { useRouter } from "next/router";
 import SearchBar from "../common/SearchBar";
+import CartIcon from "../common/CartIcon";
 
 const Header: React.FC = () => {
   const router = useRouter();
@@ -19,7 +19,7 @@ const Header: React.FC = () => {
     <header>
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <CgMenu size={32} onClick={handleNav} className="md:hidden"/>
+          <CgMenu size={32} onClick={handleNav} className="md:hidden" />
           {!searchOpen && (
             <h1
               className="uppercase font-extrabold text-2xl"
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           )}
         </div>
         {searchOpen && <SearchBar />}
-        
+
         {/* Desktop Links */}
         <nav className="hidden md:flex items-center gap-6">
           {NAV_LINKS.map((link) => (
@@ -58,10 +58,7 @@ const Header: React.FC = () => {
             size={32}
             onClick={() => setSearchOpen((prev) => !prev)}
           />
-          <MdOutlineShoppingCart
-            size={28}
-            onClick={() => router.push("/cart")}
-          />
+          <CartIcon />
           <FaRegUserCircle size={28} onClick={() => router.push("/user")} />
         </div>
       </div>

@@ -16,8 +16,8 @@ const Hero = () => {
       viewport={{ once: true }}
     >
       <div className="container">
-        <div className="flex flex-col gap-6">
-          <h2 className="font-extrabold text-4xl uppercase md:text-center md:text-6xl">
+        <div className="flex flex-col gap-4">
+          <h2 className="font-extrabold text-4xl uppercase md:text-center sm:text-6xl">
             Find clothes
             <br />
             that matches
@@ -46,7 +46,7 @@ const Hero = () => {
 
       {/* Logos */}
       <div
-        className="bg-black flex items-center justify-center gap-6 flex-wrap"
+        className="bg-black flex items-center justify-center gap-6 flex-wrap lg:justify-around"
         style={{ padding: "22px", marginTop: "26px" }}
       >
         {HERO_LOGOS.map((logo) => (
@@ -54,7 +54,7 @@ const Hero = () => {
             src={logo.logo}
             alt={logo.href}
             key={logo.href}
-            className="w-22"
+            className="w-22 lg:w-26"
           />
         ))}
       </div>

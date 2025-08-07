@@ -48,7 +48,9 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
   return (
     <>
       {/* Gallery */}
-      <img src={productImage} alt={productName} />
+      <div className="flex justify-center">
+        <img src={productImage} alt={productName} className="w-full lg:w-1/3" />
+      </div>
 
       {/* ProductInfo */}
       <div className="flex flex-col gap-3">

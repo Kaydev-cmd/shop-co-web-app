@@ -1,6 +1,5 @@
 import React from "react";
 import { ProductCardProps } from "@/interfaces";
-import { FaStar } from "react-icons/fa";
 import Rating from "./Rating";
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -21,7 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           <span>{rating}</span>/5
         </p>
       </div>
-      <p className="text-2xl font-bold">{price}</p>
+      <p className="text-2xl font-bold">${price}</p>
     </div>
   );
 };

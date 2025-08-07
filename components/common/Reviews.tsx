@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Button from "./Button";
 import { ImEqualizer2 } from "react-icons/im";
 import ReviewCard from "./ReviewCard";
-import { REVIEWS } from "@/constants";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([
@@ -50,8 +49,8 @@ const Reviews = () => {
     <>
       <div className="flex justify-between items-center">
         <h3>
-          <span className="font-bold text-xl">All Reviews</span>{" "}
-          {reviews.length}
+          <span className="font-bold text-xl">All Reviews</span> (
+          {reviews.length})
         </h3>
         <div className="flex items-center ">
           <div

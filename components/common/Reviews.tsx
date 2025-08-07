@@ -64,7 +64,7 @@ const Reviews = () => {
               className="bg-gray-200 rounded-full"
               style={{ padding: "12px", marginRight: "8px" }}
             >
-              <ImEqualizer2 />
+              <ImEqualizer2 className="cursor-pointer" />
             </div>
             <Button title="Write a Review" onClick={() => setShowForm(true)} />
           </div>
@@ -113,7 +113,10 @@ const Reviews = () => {
           </div>
         )}
 
-        <div className="flex flex-col gap-6" style={{ marginTop: "24px" }}>
+        <div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+          style={{ marginTop: "24px" }}
+        >
           {reviews.map((review) => (
             <ReviewCard
               key={review.nameOfUser}

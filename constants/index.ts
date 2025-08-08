@@ -305,7 +305,7 @@ export const PAYMENT_GATEWAYS = [
   },
   {
     name: "PayPal",
-    image: "/assets/images/payment_gateways/PayPal.png",
+    image: "/assets/images/payment_gateways/Paypal.png",
     alt: "PayPal",
   },
   {

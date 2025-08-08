@@ -25,6 +25,16 @@ export interface ProductCardProps {
   description?: string;
 }
 
+export interface ProductSearchCardProps {
+  id?: string;
+  image: string;
+  alt: string;
+  itemName: string;
+  price: number;
+  rating: string;
+  description: string;
+}
+
 export interface ReviewCardProps {
   nameOfUser: string;
   review: string;

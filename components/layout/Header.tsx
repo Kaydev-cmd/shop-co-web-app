@@ -77,7 +77,7 @@ const Header: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="flex flex-col items-center justify-center gap-6 absolute top-32 left-0 w-full bg-black text-white h-68 z-5"
+                className="flex flex-col items-center justify-center gap-6 absolute top-33 left-0 w-full bg-black text-white h-72 z-5"
               >
                 {NAV_LINKS.map((link) => (
                   <Link

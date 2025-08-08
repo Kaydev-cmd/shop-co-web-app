@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { PRODUCT_INFO } from "@/constants";
-import ProductCard from "@/components/common/ProductCard";
-import Subscribe from "@/components/common/Subscribe";
 import { motion } from "framer-motion";
+import Subscribe from "@/components/common/Subscribe";
+import ProductSearchCard from "@/components/common/ProductSearchCard";
 
 const SearchPage = () => {
   const searchParams = useSearchParams();
@@ -32,7 +32,7 @@ const SearchPage = () => {
             <div className="grid grid-cols-1">
               {filteredProducts.map((product) => (
                 <Link href={`/product/${product.id}`} key={product.id}>
-                  <ProductCard
+                  <ProductSearchCard
                     key={product.id}
                     id={product.id}
                     image={product.productImage}

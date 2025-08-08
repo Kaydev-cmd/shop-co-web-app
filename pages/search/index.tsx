@@ -26,7 +26,7 @@ const SearchPage = () => {
         viewport={{ once: true }}
       >
         <section className="container">
-          <h1> Search Results for "{query}"</h1>
+          <h1> Search Results for &quot;{query}&quot;</h1>
 
           {filteredProducts.length > 0 ? (
             <div className="grid grid-cols-1">

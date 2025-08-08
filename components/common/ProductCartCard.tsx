@@ -2,6 +2,7 @@ import React from "react";
 import { ProductCartCardProps } from "@/interfaces";
 import { FaTrashCan } from "react-icons/fa6";
 import { useCart } from "@/context/CartContext";
+import Image from "next/image";
 
 const ProductCartCard: React.FC<ProductCartCardProps> = ({
   productImage,
@@ -13,14 +14,14 @@ const ProductCartCard: React.FC<ProductCartCardProps> = ({
   const { removeFromCart } = useCart();
 
   return (
-    <div className="flex items-center" style={{ padding: "4px 0" }}>
-      <div>
-        <img
+    <div className="flex items-center gap-4" style={{ padding: "4px 0" }}>
+        <Image
           src={productImage}
           alt={productName}
-          className="rounded-xl w-[80%]"
+          className="rounded-xl"
+          width={200}
+          height={200}
         />
-      </div>
       <div className="flex flex-col gap-2">
         <div className="flex items-center justify-between gap-4">
           <h3 className="text-lg font-bold md:text-xl">{productName}</h3>

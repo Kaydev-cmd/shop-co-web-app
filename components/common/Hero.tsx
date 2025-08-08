@@ -4,6 +4,7 @@ import { HERO_LOGOS } from "@/constants";
 import HeroStats from "./HeroStats";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Hero = () => {
   const router = useRouter();
@@ -34,11 +35,6 @@ const Hero = () => {
             title="Shop Now"
             onClick={() => router.push("/#newArrivals")}
           />
-          <img
-            src="/assets/images/hero/hero_image.png"
-            alt="Hero"
-            className="hidden"
-          />
 
           <HeroStats />
         </div>
@@ -50,11 +46,13 @@ const Hero = () => {
         style={{ padding: "22px", marginTop: "26px" }}
       >
         {HERO_LOGOS.map((logo) => (
-          <img
+          <Image
             src={logo.logo}
             alt={logo.href}
             key={logo.href}
-            className="w-22 lg:w-26"
+            width={88}
+            height={88}
+            className="lg:w-26"
           />
         ))}
       </div>

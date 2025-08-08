@@ -10,6 +10,7 @@ import {
   RESOURCES_LINKS,
 } from "@/constants";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -142,7 +143,12 @@ const Footer = () => {
                 className="bg-white flex items-center rounded-md"
                 style={{ padding: "8px" }}
               >
-                <img src={gateway.image} alt={gateway.alt} />
+                <Image
+                  src={gateway.image}
+                  alt={gateway.alt}
+                  width={20}
+                  height={20}
+                />
               </div>
             ))}
           </div>

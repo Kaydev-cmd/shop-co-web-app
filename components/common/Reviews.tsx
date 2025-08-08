@@ -28,6 +28,7 @@ const Reviews = () => {
     name: "",
     review: "",
   });
+  const [sortAsc, setSortAsc] = useState(true);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,6 +45,16 @@ const Reviews = () => {
 
     setFormData({ name: "", review: "" });
     setShowForm(false);
+  };
+
+  const handleSort = () => {
+    const sorted = [...reviews].sort((a, b) => {
+      return sortAsc
+        ? a.nameOfUser.localeCompare(b.nameOfUser)
+        : b.nameOfUser.localeCompare(a.nameOfUser);
+    });
+    setReviews(sorted);
+    setSortAsc(!sortAsc);
   };
 
   return (
@@ -64,7 +75,7 @@ const Reviews = () => {
               className="bg-gray-200 rounded-full"
               style={{ padding: "12px", marginRight: "8px" }}
             >
-              <ImEqualizer2 className="cursor-pointer" />
+              <ImEqualizer2 className="cursor-pointer" onClick={handleSort} />
             </div>
             <Button title="Write a Review" onClick={() => setShowForm(true)} />
           </div>

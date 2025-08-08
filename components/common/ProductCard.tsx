@@ -1,6 +1,7 @@
 import React from "react";
 import { ProductCardProps } from "@/interfaces";
 import Rating from "./Rating";
+import Image from "next/image";
 
 const ProductCard: React.FC<ProductCardProps> = ({
   image,
@@ -11,7 +12,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <div className="card flex flex-col gap-3">
-      <img src={image} alt={alt} className="rounded-2xl w-full" />
+      <Image
+        src={image}
+        alt={alt}
+        className="rounded-2xl"
+        width={400}
+        height={400}
+        style={{ marginBottom: "8px" }}
+      />
       <h3 className="font-bold text-2xl">{itemName}</h3>
       <div className="flex items-center gap-2">
         <Rating />

@@ -7,6 +7,7 @@ import Rating from "./Rating";
 import PillGroup from "./PillGroup";
 import { useCart } from "@/context/CartContext";
 import { COLORS } from "@/constants";
+import Image from "next/image";
 
 const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
   productName,
@@ -49,7 +50,7 @@ const ProductInfoCard: React.FC<ProductInfoCardProps> = ({
     <>
       {/* Gallery */}
       <div className="flex justify-center">
-        <img src={productImage} alt={productName} className="w-full lg:w-1/3" />
+        <Image src={productImage} alt={productName} width={400} height={400} />
       </div>
 
       {/* ProductInfo */}

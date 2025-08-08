@@ -166,8 +166,16 @@ const Home = () => {
             >
               <h3 className="font-extrabold text-4xl">Our Happy Customers</h3>
               <div className="flex gap-6">
-                <FaArrowLeftLong size={20} onClick={prevReview} />
-                <FaArrowRightLong size={20} onClick={nextReview} />
+                <FaArrowLeftLong
+                  size={20}
+                  onClick={prevReview}
+                  className="cursor-pointer"
+                />
+                <FaArrowRightLong
+                  size={20}
+                  onClick={nextReview}
+                  className="cursor-pointer"
+                />
               </div>
             </div>
             <div className="flex flex-col gap-4">

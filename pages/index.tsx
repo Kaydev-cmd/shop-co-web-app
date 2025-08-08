@@ -71,8 +71,8 @@ const Home = () => {
                 }}
               >
                 {NEW_ARRIVALS.map((product) => (
-                  <SwiperSlide>
-                    <Link href={`product/${product.id}`} key={product.id}>
+                  <SwiperSlide key={product.id}>
+                    <Link href={`product/${product.id}`}>
                       <ProductCard
                         key={product.itemName}
                         image={product.image}
@@ -128,8 +128,8 @@ const Home = () => {
                 }}
               >
                 {TOP_SELLING.map((product) => (
-                  <SwiperSlide>
-                    <Link href={`/product/${product.id}`} key={product.id}>
+                  <SwiperSlide key={product.id}>
+                    <Link href={`/product/${product.id}`}>
                       <ProductCard
                         key={product.itemName}
                         image={product.image}

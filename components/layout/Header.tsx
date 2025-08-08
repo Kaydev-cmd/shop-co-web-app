@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { NAV_LINKS } from "@/constants";
 import Link from "next/link";
 import { CgMenu } from "react-icons/cg";
-import { FaRegUserCircle } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import { useRouter } from "next/router";
 import SearchBar from "../common/SearchBar";
@@ -100,11 +99,6 @@ const Header: React.FC = () => {
               className="hover:text-blue-600 transition-all duration-300 cursor-pointer"
             />
             <CartIcon />
-            {/* <FaRegUserCircle
-              size={28}
-              onClick={() => router.push("/user")}
-              className="hover:text-blue-600 transition-all duration-300 cursor-pointer"
-            /> */}
           </div>
         </div>
       </header>

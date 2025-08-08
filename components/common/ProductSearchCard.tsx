@@ -1,6 +1,7 @@
 import React from "react";
 import Rating from "./Rating";
 import { ProductSearchCardProps } from "@/interfaces";
+import Image from "next/image";
 
 const ProductSearchCard: React.FC<ProductSearchCardProps> = ({
   image,
@@ -11,7 +12,13 @@ const ProductSearchCard: React.FC<ProductSearchCardProps> = ({
 }) => {
   return (
     <div className="card flex flex-col gap-3">
-      <img src={image} alt={alt} className="rounded-2xl w-full lg:w-1/3" />
+      <Image
+        src={image}
+        alt={alt}
+        className="rounded-2xl"
+        width={400}
+        height={400}
+      />
       <h3 className="font-bold text-2xl">{itemName}</h3>
       <div className="flex items-center gap-2">
         <Rating />

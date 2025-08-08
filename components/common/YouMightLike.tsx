@@ -36,8 +36,8 @@ const YouMightLike = () => {
           }}
         >
           {TOP_SELLING.map((product) => (
-            <SwiperSlide>
-              <Link href={`/product/${product.id}`} key={product.id}>
+            <SwiperSlide key={product.id}>
+              <Link href={`/product/${product.id}`}>
                 <ProductCard
                   key={product.itemName}
                   image={product.image}

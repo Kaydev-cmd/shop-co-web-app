@@ -1,6 +1,5 @@
 import React from "react";
 import { ReviewCardProps } from "@/interfaces";
-import { FaStar } from "react-icons/fa";
 import { MdVerifiedUser } from "react-icons/md";
 import Rating from "./Rating";
 
